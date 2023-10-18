@@ -1,7 +1,7 @@
 <div align="center">
 <h1 align="center">
 <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" />
-<br>StackOverFlow</h1>
+<br>ClassNotFound</h1>
 <h3>◦ Developed with the software and tools below.</h3>
 
 <p align="center">
@@ -12,10 +12,10 @@
 <img src="https://img.shields.io/badge/Markdown-000000.svg?style&logo=Markdown&logoColor=white" alt="Markdown" />
 <img src="https://img.shields.io/badge/Express-000000.svg?style&logo=Express&logoColor=white" alt="Express" />
 </p>
-<img src="https://img.shields.io/github/license/SamyOffer/StackOverFlow?style&color=5D6D7E" alt="GitHub license" />
-<img src="https://img.shields.io/github/last-commit/SamyOffer/StackOverFlow?style&color=5D6D7E" alt="git-last-commit" />
-<img src="https://img.shields.io/github/commit-activity/m/SamyOffer/StackOverFlow?style&color=5D6D7E" alt="GitHub commit activity" />
-<img src="https://img.shields.io/github/languages/top/SamyOffer/StackOverFlow?style&color=5D6D7E" alt="GitHub top language" />
+<img src="https://img.shields.io/github/license/SamyOffer/ClassNotFound?style&color=5D6D7E" alt="GitHub license" />
+<img src="https://img.shields.io/github/last-commit/SamyOffer/ClassNotFound?style&color=5D6D7E" alt="git-last-commit" />
+<img src="https://img.shields.io/github/commit-activity/m/SamyOffer/ClassNotFound?style&color=5D6D7E" alt="GitHub commit activity" />
+<img src="https://img.shields.io/github/languages/top/SamyOffer/ClassNotFound?style&color=5D6D7E" alt="GitHub top language" />
 </div>
 
 ---
@@ -26,7 +26,7 @@
 - [📂 Repository Structure](#-repository-structure)
 - [🚀 Getting Started](#-getting-started)
     - [🔧 Installation](#-installation)
-    - [🤖 Running StackOverFlow](#-running-StackOverFlow)
+    - [🤖 Running ClassNotFound](#-running-ClassNotFound)
 ---
 
 
@@ -39,7 +39,7 @@ I recreated Stack Overflow using the MVC (Model-View-Controller) design pattern 
 ## 📂 Repository Structure
 
 ```sh
-└── StackOverFlow/
+└── ClassNotFound/
     ├── .gitignore
     ├── README.md
     ├── UtilisateursjeuxmBureaudb_Project.sqlite
@@ -78,14 +78,14 @@ I recreated Stack Overflow using the MVC (Model-View-Controller) design pattern 
 
 ### 🔧 Installation
 
-1. Clone the StackOverFlow repository:
+1. Clone the ClassNotFound repository:
 ```sh
-git clone https://github.com/SamyOffer/StackOverFlow
+git clone https://github.com/SamyOffer/ClassNotFound
 ```
 
 2. Change to the project directory:
 ```sh
-cd StackOverFlow
+cd ClassNotFound
 ```
 
 3. Install the dependencies:
@@ -93,7 +93,7 @@ cd StackOverFlow
 npm i 
 ```
 
-### 🤖 Running StackOverFlow
+### 🤖 Running ClassNotFound
 
 ```sh
 npm start
