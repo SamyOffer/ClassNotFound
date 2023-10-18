@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <section class="searchBar_categoryFilter_section">
+    <!-- Category filter -->
+    <div class="category_menu">
+      <ul id="category-filtre">
+        <li>Categories
+          <ul>
+            {{#each categories}}
+            <form action="/categoryFiltre" method="get">
+              <li><input name="categoryID" type="hidden" value="{{this.id_category}}">
+                <input type="submit" value="{{this.name}}">
+              </li>
+            </form>
+            {{/each}}
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search_bar_box">
+      <form action="/search" method="get">
+        <div class="input-group">
+          <input type="search" name="nameSearch" class="searchBar" placeholder="Search" aria-label="Search"
+            aria-describedby="search-addon" />
+          <button type="submit" class="searchButton">search</button>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <section class="display20questions">
+    <!-- Display the 20 last questions -->
+    {{#each table}}
+    <ul id="idQuestionListIndex">
+
+      <a class="linkQuestionOfIndexPage" href="http://localhost:3000/question?questionID={{this.id_question}}">
+        <h4>{{this.title}}</h4>
+      </a>
+      {{#unless this.resolved}}
+      <h5 id="isResolvedQuestion">Not resolved</h5>
+      {{else}}
+      <h5 id="isResolvedQuestion">Resolved</h5>
+      {{/unless}}
+
+    </ul>
+    {{/each}}
+
+
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <section class="memberAdminTablesSection">
+        <!-- table of open quetions-->
+        <table class="openQuestionsTable">
+            <thead>
+                <tr>
+                    <th colspan="2">Open questions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each openQuestionslist}}
+                <tr>
+                    <!--<td>{{this.title}}</td>-->
+                    <td>
+                        <a href="http://localhost:3000/question?questionID={{this.id_question}}">{{this.title}}</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        <!-- table of resolved questions-->
+        <table class="resolvedQuestionsTable">
+            <thead>
+                <tr>
+                    <th>Resolved questions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each resolvedQuestionslist}}
+                <tr>
+                    <td>
+                        <a href="http://localhost:3000/question?questionID={{this.id_question}}">{{this.title}}</a>
+                    </td>
+
+                    <!--<td>{{this.title}}</td>-->
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

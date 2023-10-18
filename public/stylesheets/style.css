@@ -1,0 +1,432 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  body{
+    margin-bottom: 10%;
+  }
+  /** Header CSS */
+
+  header{
+  border-bottom: solid;
+  padding-bottom: 20px;
+  }
+
+
+  #topnav {
+  margin-right: 3%;
+  top: 30%;
+  font-size: large;
+  float: right;
+  color: #f2f2f2;
+  color : black;
+  padding: 14px 16px;
+  text-decoration: black;
+  }
+
+  .slogan {
+  padding-left: 2%;
+  }
+
+  /** Footer CSS*/
+  footer {
+    background-color: white;
+    position : fixed;
+    left: 0;
+    bottom: 0;
+    color: black;
+    border-top: solid;
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  /** Main Page */
+
+ 
+  .searchBar_categoryFilter_section{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .search_bar_box {
+    width: 50%;
+    height: 40px;
+    padding-left: 20%;
+  }
+
+
+  .searchBar{
+    width: 80%;
+    height: 40px;
+    border:solid;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+
+  .searchButton{
+  height: 40px;
+  background-color: rgb(156, 156, 156);
+  border-radius: 7px;
+  }
+  
+  .caterogy_menu {
+    position: absolute;
+  }
+
+  .display20questions {
+    padding-left: 10%;
+  }
+
+  #isResolvedQuestion {
+    display: flex;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-decoration:dashed;
+  }
+
+  .linkQuestionOfIndexPage{
+    padding-left: 2%;
+    padding-bottom: 1%;
+  }
+
+  #show_question {
+    display: flex;
+    right: 13%;
+  }
+
+  #idQuestionListIndex {
+    border:solid;
+    display: flex;
+    padding-top: 1%;
+    margin-top: 3%;
+    margin-right: 10%;
+    border-radius: 5px;
+    
+  }
+
+
+  
+  
+  /** Category filter CSS */
+  #category-filtre {
+    position:absolute;
+    top: 20%;
+    left: 10%;
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: center;
+    width: 180px;
+  }
+  #category-filtre ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: center;
+  }
+  #category-filtre li {
+     background-color:#a1a1a1; 
+     border-radius: 6px;
+     margin-bottom:2px;
+     box-shadow: 3px 3px 3px #999;
+     border:solid 1px #333A40
+  }
+  #category-filtre li li {
+     max-height:0;
+     overflow: hidden;
+     transition: all .5s;
+     border-radius:0;
+     background: #444;
+     box-shadow: none;
+     border:none;
+     margin:0
+  }
+  #category-filtre a {
+    display:block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 0;
+    font-family: verdana;
+    font-size:1.2em
+  }
+  #category-filtre ul li a, #category-filtre li:hover li a {
+    font-size:1em
+  }
+  #category-filtre li:hover {
+     background: #8d8d8d
+  }
+  #category-filtre li li:hover {
+     background: #999;
+  }
+  #category-filtre ul li:last-child {
+     border-radius: 0 0 6px 6px;
+     border:none;
+  }
+  #category-filtre li:hover li {
+    max-height: 15em;
+  }
+
+
+  /** CSS questions page : title , description, category*/
+  #title_question {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    size-adjust: 100%;
+  }
+
+  #categoryAndAuthorAndDate_question {
+    display: inline;
+    justify-content: space-between;
+    margin-left: 10%;
+  
+  }
+  
+  #description_question {
+    margin-top: 30px;
+    text-align: left;
+    padding-left: 1%;
+    margin-right: 8%;
+    margin-left: 8%;
+    margin-bottom: 2%;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+  }
+
+  /** report Question Button **/
+  .reportQuestionButton{
+    float: right;
+    padding-right: 5%;
+  }
+
+  /** CSS answers  **/
+
+  #answer_question {
+
+    padding-left: 2%;
+    margin-bottom: 2%;
+  }
+
+  #ul_answer {
+    padding-left: 5%;
+    padding-right: 8%;
+    display: flex;
+    padding-top: 1%;
+  }
+
+  .right_answer_button {
+    margin-right: 1%;
+  }
+
+  /** CSS answer form**/
+  #form_create_answer {
+    padding-top: 40px;
+    padding-left: 8%;
+    margin-bottom: 10%;
+  }
+
+
+
+
+  /** tables of users MEMBERS / ADMIN  page **/
+
+
+  .memberAdminTablesSection{
+    margin-top: 100px;
+    display: flex;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    width: 600px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+
+  thead {
+    background-color: rgba(121, 121, 121, 0.781);
+    
+  }
+
+  td, th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+    height: auto;
+    width: auto;
+    word-break:break-word;
+  }
+
+  .tdBanAcceptButtonAdmin{
+    text-align: center;
+    width: 40px;
+  }
+
+  .idSubjectQuestionAdminPage{
+    padding-top: 10px;
+    font-weight: lighter;
+
+  }
+
+  .titleQuestionLinkAdminPage{
+    font-weight: bolder;
+  }
+
+  .BanAcceptButtonAdmin{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+  }
+  
+
+
+
+    
+  /** Create Question Page **/
+  
+  #section_create_question {
+    margin-top: 5%;
+  }
+  .create_question_form {
+    width: 600px;
+    text-align: center;
+    background-color:rgba(128, 128, 128, 0.5);
+    border:solid;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .divCreateQuestionForm {
+    padding-top: 10px;
+
+  }
+
+  .textAreaCreatQuestion {
+    width: auto;
+    height: auto;
+    border:solid;
+    border-radius: 5px;
+    resize: none;
+  }
+
+  .submitCreateQuestionButton {
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+  }
+
+  .errorMessage{
+    padding-top: 1%;
+    color:red;
+  }
+
+
+  /** Login page **/
+  #login_form_section{
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .loginForm{
+    background-color:rgba(128, 128, 128, 0.5);
+    border:solid;
+    margin-left: 33%;
+    margin-right: 33%;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .divLoginForm{
+    padding-top: 10px;
+  }
+
+  .textsBoxLoginRegister{
+    width: auto;
+    height: 20px;
+    border:solid;
+    border-radius: 5px;
+  }
+
+  .submitLoginRegisterButton{
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    
+  }
+
+  /** register page **/
+  #register_form_section{
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .registerForm{
+    background-color:rgba(128, 128, 128, 0.5);
+    border:solid;
+    margin-left: 33%;
+    margin-right: 33%;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .divRegisterForm{
+    padding-top: 10px;
+  }
+
+  /** Error Login Message **/
+  .errorLoginMessage{
+    padding-top: 30px;
+  }
+
+
+  /** links to questions **/
+  a:link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(117, 117, 117);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

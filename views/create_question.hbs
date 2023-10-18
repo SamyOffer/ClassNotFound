@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<!-- Form to create a new question -->
+
+<body>
+    <section id="section_create_question">
+        <form class="create_question_form" method="post" action="/question/add_question">
+            <h1 class="tilteCreateQuestion">Post a question</h1>
+            <!--Title of the question -->
+            <div class="divCreateQuestionForm">
+                <h4>Title :</h4>
+                <input class="textsBoxLoginRegister" type="text" id="title" name="title" size="50" maxlength="100">
+            </div>
+            <!--Category of the question -->
+            <div class="divCreateQuestionForm">
+                <h4>Category :</h4>
+                <select name="category">
+                    {{#each categories}}
+                    <option value="{{this.id_category}}" name="category">{{this.name}}</option>
+                    {{/each}}
+                </select>
+            </div class="divCreateQuestionForm">
+            <!--Description of the question -->
+            <div>
+                <h4>Description :</h4>
+                <label for="description"></label>
+                <textarea class="textAreaCreatQuestion" rows="10" cols="50" name="description"></textarea>
+            </div class="divCreateQuestionForm">
+            <!-- Submiit button -->
+            <div>
+                <input class="submitCreateQuestionButton" type="submit" value="submit"></input>
+            </div>
+            {{#if emptyTitle}}
+            <h4 class="errorMessage">Error, title is empty !</h4>
+            {{/if}}
+            {{#if emptyDescription}}
+            <h4 class="errorMessage">Error, description is empty !</h4>
+            {{/if}}
+        </form>
+    </section>
+</body>
+
+</html>

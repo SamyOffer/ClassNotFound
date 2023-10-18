@@ -1,0 +1,26 @@
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<header>
+    <div>
+        <a href="/"> <img src="/images/logo.png" alt="logo"></a>
+        {{#if loginVariable}}
+        {{#if admin}}
+        <a id="topnav" href="/users/admin">Admin</a>
+        {{/if}}
+        <a id="topnav" href="/question/create_question">Post a question</a>
+        <a id="topnav" href="/users/logout">Log Out</a>
+        <a id="topnav" href="/users/member_page">Member page</a>
+        {{else}}
+        <a id="topnav" href="/users"> Sign In </a>
+        <a id="topnav" href="/users/register"> Sign Up</a>
+        {{/if}}
+
+
+    </div>
+
+    <div class="slogan">
+        <h3>Create your own project</h3>
+    </div>
+
+</header>

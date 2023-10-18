@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <!-- Display question : title, category, date_creation, question_description -->
+  <section>
+
+    <h1 id="title_question">Title : {{question.title}}</h1>
+    <h2 id="categoryAndAuthorAndDate_question">Category : {{categoryName}}</h2>
+    <h2 id="categoryAndAuthorAndDate_question">Author : {{questionAuthor}} </h2>
+    <h2 id="categoryAndAuthorAndDate_question">Date : {{question.date_creation}}</h2>
+    <h3 id="description_question">{{question.description}}</h3>
+  </section>
+
+  <!-- report question button -->
+  <div class="reportQuestionButton">
+    <form action="/question/reportQuestion" method="post" class="report_question_button">
+      <input name="id_question" type="hidden" value="{{question.id_question}}">
+      <input type="submit" name="reportQuestion" value="report question">
+    </form>
+  </div>
+
+
+  <!-- Display answers  -->
+
+  {{#each goodAnswerstable}}
+  <ul id="ul_answer">
+    <!-- Button Set as Report Answer -->
+    {{#if ../id_member}}
+    <!-- report answer button -->
+    <form action="/question/reportAnswer" method="post" class="report_answer_button">
+      <input name="answerID" type="hidden" value="{{this.id_answer}}">
+      <input name="id_question" type="hidden" value="{{../question.id_question}}">
+      <input type="submit" name="reportAnswer" value="report">
+    </form>
+    {{/if}}
+
+    <!-- Display the date and the description -->
+    <h3 id="answer_date">({{this.date}}) </h3>
+    <h3 id="answer_RightAnswer_button">{{this.description}}</h3>
+    {{#if this.good_answer}}
+    <h6>correct</h6>
+    {{/if}}
+  </ul>
+  {{/each}}
+
+  {{#each answersTable}}
+  <ul id="ul_answer">
+    <!-- Button Set as Correct Answer -->
+    {{#if (eq ../id_member ../question.id_member ) }}
+    {{#unless ../question.resolved }}
+    <form action="/question/setAsCorrectAnswer" method="post" class="right_answer_button">
+      <input name="answerID" type="hidden" value="{{this.id_answer}}">
+      <input name="id_question" type="hidden" value="{{../question.id_question}}">
+      <input type="submit" name="correctAnswer" value="correctAnswer">
+    </form>
+    {{/unless}}
+    {{/if}}
+
+    <!-- Button Set as Report Answer -->
+    {{#if ../id_member}}
+    <form action="/question/reportAnswer" method="post" class="report_answer_button">
+      <input name="answerID" type="hidden" value="{{this.id_answer}}">
+      <input name="id_question" type="hidden" value="{{../question.id_question}}">
+      <input type="submit" name="reportAnswer" value="report">
+    </form>
+    {{/if}}
+
+    <!-- Display the date and the description -->
+    <h3 id="answer_date">({{this.date}}) </h3>
+    <h3 id="answer_RightAnswer_button">{{this.description}}</h3>
+    {{#if this.good_answer}}
+    <h6>correct</h6>
+    {{/if}}
+  </ul>
+  {{/each}}
+  </section>
+
+
+  {{#if loginVariable}}
+  {{#unless question.resolved }}
+  <!-- Display answer form-->
+  <section id="form_create_answer">
+    <h3>Form Answer</h3>
+    <form method="post" action="/question/add_answer">
+
+      <div>
+        <label for="textArea"></label>
+        <textarea rows="10" cols="50" name="textArea" minlength="5" required="required" <></textarea>
+      </div>
+
+      <!-- Submiit button -->
+
+      <div>
+        <input type="submit" value="submit"></input>
+        <input type="hidden" name="id_question" value="{{question.id_question}}"></input>
+      </div>
+
+    </form>
+    {{#if error}}
+    <h3>erreur</h3>
+    {{/if}}
+
+  </section>
+</body>
+{{/unless}}
+{{/if }}
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <section id="login_form_section">
+    <!-- LOGIN PAGE  -->
+
+    <form class="loginForm" method="post" action="/users/login">
+      <h1>Sign in</h1>
+      <div class="divLoginForm">
+        <!-- Email input -->
+        <label>Login : </label>
+        <input type="text" class="textsBoxLoginRegister" name="memberLogin" value="" placeholder="Mail" />
+      </div>
+      <div class="divLoginForm">
+        <!-- Password input-->
+        <label>Password : </label>
+        <input type="password" class="textsBoxLoginRegister" name="memberPassword" value="" placeholder="Password" />
+      </div>
+      <div class="divLoginForm">
+        <!-- Submit button-->
+        <input class="submitLoginRegisterButton" type="submit" value="Log in">
+      </div>
+    </form>
+
+    {{#if errorLoginPassword}}
+    <h3 class="errorMessage">Password incorrect</h3>
+    {{/if}}
+
+    {{#if errorLoginMail}}
+    <h3 class="errorLoginMessage">Mail incorrect</h3>
+    {{/if}}
+
+
+  </section>
+
+</body>
+
+</html>

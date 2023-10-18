@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <section id="register_form_section">
+
+    <form class="registerForm" method="post" action="/users/add">
+      <h1>Sign up</h1>
+      <!-- Firstname input-->
+      <div class="divRegisterForm">
+        <label>First name : </label>
+        <input type="text" class="textsBoxLoginRegister" name="firstname" placeholder="First name">
+
+      </div>
+      <!-- Lastname input -->
+      <div class="divRegisterForm">
+        <label>Last name : </label>
+        <input type="text" class="textsBoxLoginRegister" name="lastname" placeholder="Name">
+
+      </div class="divRegisterForm">
+      <!-- Email input -->
+      <div class="divRegisterForm">
+        <label>Email address : </label>
+        <input type="email" class="textsBoxLoginRegister" name="email" placeholder="Mail" />
+
+      </div>
+
+      <!-- Password input -->
+      <div class="divRegisterForm">
+        <label>Password : </label>
+        <input type="password" class="textsBoxLoginRegister" name="password" placeholder="password" />
+      </div>
+
+
+      <!-- Submit button -->
+      <div class="divRegisterForm">
+        <input class="submitLoginRegisterButton" type="submit" value="submit"></input>
+      </div>
+
+    </form>
+
+
+
+
+    {{#if errorRegisterMailIncorrect}}
+    <h3 class="errorMessage">Wrong mail</h3>
+    {{/if}}
+
+    {{#if errorRegisterIndatabase}}
+    <h3 class="errorMessage">Mail already exist</h3>
+    {{/if}}
+
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  
+    <body>
+        <section class="memberAdminTablesSection">
+            <!-- table of reported quetions-->
+            <table class="reportedQuestionsTable">
+                <thead>
+                    <tr>
+                        <th colspan="3">Reported questions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each reportedQuestionslist}}
+                    <tr>
+                        <td>
+                            <a  href="http://localhost:3000/question?questionID={{this.id_question}}"><h4>{{this.title}}</h4></a>
+                            <h5 class="idSubjectQuestionAdminPage">{{this.description}}</h5>
+                        </td>
+                        <td class="tdBanAcceptButtonAdmin"><form action = "/admin/banQuestion" method = "post">
+                            <input name="questionID" type="hidden" value="{{this.id_question}}">
+                            <input class="BanAcceptButtonAdmin" type="submit" value="ban">
+                        </form></td>
+                        <td class="tdBanAcceptButtonAdmin"><form action = "/admin/acceptQuestion" method = "post">
+                            <input name="questionID" type="hidden" value="{{this.id_question}}">
+                            <input class="BanAcceptButtonAdmin" type="submit" value="accept">
+                        </form></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <!-- table of reported answers-->
+            <table class="reportedAnswersTable">
+                <thead>
+                    <tr>
+                        <th colspan="3">Reported answers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each reportedAnswerslist}}
+                    <tr>
+                        <td>
+                            <a  href="http://localhost:3000/question?questionID={{this.id_question}}">{{this.description}}</a>
+                        </td>
+                        <td class="tdBanAcceptButtonAdmin"><form action = "/admin/banAnswer" method = "post">
+                            <input name="answerID" type="hidden" value="{{this.id_answer}}">
+                            <input class="BanAcceptButtonAdmin" type="submit" value="ban">
+                        </form></td>
+                        <td class="tdBanAcceptButtonAdmin"><form action = "/admin/acceptAnswer" method = "post">
+                            <input name="answerID" type="hidden" value="{{this.id_answer}}">
+                            <input class="BanAcceptButtonAdmin" type="submit" value="accept">
+                        </form></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
+    </body>
+
+</html>
+
+
+
